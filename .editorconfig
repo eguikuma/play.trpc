@@ -1,0 +1,11 @@
+root = true
+
+[**/*.{js,mjs,jsx,ts,tsx,css,html,md,yml,yaml,json,prisma}]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+indent_style = space
+indent_size = 2
+
+[{Makefile,**.mk}]
+indent_style = tab

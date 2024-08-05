@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:15
+    restart: always
+    tty: true
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: local
+      TZ: Asia/Tokyo
+    ports:
+      - ${DB_PORT:-5432}:5432
+    volumes:
+      - db:/var/lib/postgresql/data
+
+volumes:
+  db:
